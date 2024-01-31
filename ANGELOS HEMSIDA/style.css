@@ -1,0 +1,336 @@
+/*
+Theme name: Angelo Co.
+Description: Tema
+Version 1.0
+Text domain: Tema
+*/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+header {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+header div h2 {
+    margin: 20px 0 0 0;
+}
+
+header aside p {
+    margin: 0;
+}
+
+.Header-Logo {
+    display: inline-block;
+}
+
+body {
+    background-color: #000;
+    color: #F8F8FF;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --light-color: #F8F8FF;
+    --dark-color: #000;
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground: var(--light-color);
+    --background: var(--dark-color);
+    --hamburger-margin: 20px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.Hamburger-Menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: absolute;
+    top: var(--hamburger-margin);
+    right: var(--hamburger-margin);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.Hamburger-Menu:has(input:checked) {
+    --foreground: var(--dark-color);
+    --background: var(--light-color);
+}
+
+.Hamburger-Menu:has(input:focus-visible)::before,
+.Hamburger-Menu:has(input:focus-visible)::after,
+.Hamburger-Menu input:focus-visible {
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.Hamburger-Menu::before,
+.Hamburger-Menu::after,
+.Hamburger-Menu input {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing), background-color var(--animation-timing);
+}
+
+.Hamburger-Menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.Hamburger-Menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.Hamburger-Menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.Hamburger-Menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+nav {
+    transition: translate var(--animation-timing);
+    translate: 200%;
+    transform: translateX(0);
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    background-color: var(--foreground);
+    color: var(--background);
+    max-width: 10rem;
+    min-height: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.Hamburger-Menu:has(input:checked) + nav {
+    translate: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; 
+}
+
+nav li {
+    display: inline;
+}
+
+
+nav li a {
+    display: inline-block;
+    color: #000;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+nav li a:hover {
+    background-color: #39444c;
+}
+
+#Content {
+    display: grid;
+    margin: 0;
+    grid-template-rows: repeat(20, 100px); /* Använd bara 8 rader istället för 20 */
+    grid-template-columns: repeat(20, 100px); /* Använd bara 10 kolumner istället för 20 */
+    border: 20px solid #000;
+    gap: 10px;
+}
+
+.C1 img,
+.C2 img,
+.C3 img,
+.C4 img,
+.C5 img,
+.C6 img,
+.C7 img,
+.C8 img,
+.C9 img {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Behåll bildens proportioner och täck hela containern */
+}
+
+.C1 {
+    grid-column: 1 / span 10;
+    grid-row: 1 / span 6;
+    position: relative;
+}
+
+.C2 {
+    grid-column: 11 / span 7;
+    grid-row: 1 / span 3;
+    position: relative;
+}
+
+.C3 {
+    grid-column: 11 / span 7;
+    grid-row: 4 / span 3;
+    position: relative;
+}
+
+.C4 {
+    grid-column: 1 / span 7;
+    grid-row: 7 / span 3;
+    position: relative;
+}
+
+.C5 {
+    grid-column: 1 / span 7;
+    grid-row: 10 / span 3;
+    position: relative;
+}
+
+.C6 {
+    grid-column: 8 / span 10;
+    grid-row: 7 / span 6;
+    position: relative;
+}
+
+.C7 {
+    grid-column: 1 / span 10;
+    grid-row: 13 / span 6;
+    position: relative;
+}
+
+.C8 {
+    grid-column: 11 / span 7;
+    grid-row: 13 / span 3;
+    position: relative;
+}
+
+.C9 {
+    grid-column: 11 / span 7;
+    grid-row: 16 / span 3;
+    position: relative;
+}
+
+.C1::before,
+.C6::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Justera alpha-värdet för att ändra toningsnivån */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+    -moz-transition: opacity 0.6s ease-in-out;
+    -webkit-transition: opacity 0.6s ease-in-out;
+}
+
+.C2::before,
+.C3::before,
+.C4::before,
+.C5::before,
+.C8::before,
+.C9::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Justera alpha-värdet för att ändra toningsnivån */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+    -moz-transition: opacity 0.6s ease-in-out;
+    -webkit-transition: opacity 0.6s ease-in-out;
+}
+
+.C1:hover::before,
+.C2:hover::before,
+.C3:hover::before,
+.C4:hover::before,
+.C5:hover::before,
+.C6:hover::before,
+.C7:hover::before,
+.C8:hover::before,
+.C9:hover::before {
+    opacity: 1;
+}
+
+.overlay-container {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+    -moz-transition: opacity 0.6s ease-in-out;
+    -webkit-transition: opacity 0.6s ease-in-out;
+}
+
+.C1:hover .overlay-container,
+.C2:hover .overlay-container,
+.C3:hover .overlay-container,
+.C4:hover .overlay-container,
+.C5:hover .overlay-container,
+.C6:hover .overlay-container,
+.C7:hover .overlay-container,
+.C8:hover .overlay-container,
+.C9:hover .overlay-container {
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    #Content {
+        grid-template-columns: 1fr; /* Set a single column for stacking images */
+        grid-template-rows: auto; /* Allow rows to adjust based on content */
+    }
+
+    .C1,
+    .C2,
+    .C3,
+    .C4,
+    .C5,
+    .C6,
+    .C7,
+    .C8,
+    .C9 {
+        grid-column: span 1; /* Span the entire width of the container */
+        grid-row: auto; /* Allow rows to adjust based on content */
+        margin-bottom: 10px; /* Adjust spacing between image containers */
+    }
+}
