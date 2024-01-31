@@ -29,6 +29,7 @@ header aside p {
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
     background-color: #000;
     color: #F8F8FF;
     -webkit-font-smoothing: antialiased;
@@ -40,9 +41,9 @@ body {
 :root {
     --light-color: #F8F8FF;
     --dark-color: #000;
-    --bar-width: 60px;
-    --bar-height: 8px;
-    --hamburger-gap: 6px;
+    --bar-width: 35px;
+    --bar-height: 4px;
+    --hamburger-gap: 5px;
     --foreground: var(--light-color);
     --background: var(--dark-color);
     --hamburger-margin: 20px;
@@ -58,8 +59,8 @@ body {
     gap: var(--hamburger-gap);
     width: max-content;
     position: absolute;
-    top: var(--hamburger-margin);
-    right: var(--hamburger-margin);
+    top: 25px;
+    right: 60px;
     z-index: 2;
     cursor: pointer;
 }
@@ -114,12 +115,13 @@ body {
 }
 
 nav {
+    font-weight: bold;
     transition: translate var(--animation-timing);
     translate: 200%;
     transform: translateX(0);
     padding: 0.5rem 1rem;
     padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
-    background-color: var(--foreground);
+    background-color: rgba(248, 248, 255, 0.9);
     color: var(--background);
     max-width: 10rem;
     min-height: 100%;
@@ -155,7 +157,7 @@ nav li a {
 
 
 nav li a:hover {
-    background-color: #39444c;
+    background-color: 	#ff6347;
 }
 
 #Content {
