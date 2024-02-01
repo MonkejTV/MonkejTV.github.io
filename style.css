@@ -40,8 +40,8 @@ body {
 
 body.samsung-dark-mode {
     /* Åsidosätt mörkläggningsläget med ditt eget tema här */
-    background-color: #F8F8FF;
-    color: #000;
+    background-color: #fff; /* Ljus bakgrundsfärg */
+    color: #000; /* Mörk textfärg */
     /* Lägg till fler regler efter behov */
 }
 
