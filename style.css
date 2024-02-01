@@ -9,7 +9,6 @@ Text domain: Tema
 *::after,
 *::before {
     box-sizing: border-box;
-    background-color: #000;
 }
 
 header {
