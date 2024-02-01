@@ -362,8 +362,8 @@ nav li a:hover {
 }
 
 body:not(.dark-mode):not(.samsung-dark-mode) {
-    background-color: #000;
-    color: #F8F8FF;
+    background-color: #F8F8FF;
+    color: #000;
 }
 
 /* Mörkt läge stilar */
