@@ -316,7 +316,8 @@ nav li a:hover {
     opacity: 1;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px),
+all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
     #Content {
         grid-template-columns: 1fr; /* Set a single column for stacking images */
         grid-template-rows: auto; /* Allow rows to adjust based on content */
