@@ -353,3 +353,10 @@ nav li a:hover {
         --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     }
 }
+
+body.samsung-device {
+    /* Åsidosätt mörkläggningsläget med ditt eget tema här */
+    background-color: #fff; /* Ljus bakgrundsfärg */
+    color: #000; /* Mörk textfärg */
+    /* Lägg till fler regler efter behov */
+}
