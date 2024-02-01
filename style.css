@@ -38,6 +38,13 @@ body {
     padding: 0;
 }
 
+body.samsung-dark-mode {
+    /* Åsidosätt mörkläggningsläget med ditt eget tema här */
+    background-color: #fff; /* Ljus bakgrundsfärg */
+    color: #000; /* Mörk textfärg */
+    /* Lägg till fler regler efter behov */
+}
+
 :root {
     --light-color: #F8F8FF;
     --dark-color: #000;
@@ -354,16 +361,15 @@ nav li a:hover {
     }
 }
 
-/* Ljus läge standardstilar */
-
-body:not(.dark-mode) {
+body:not(.dark-mode):not(.samsung-dark-mode) {
     background-color: #000;
     color: #F8F8FF;
 }
 
 /* Mörkt läge stilar */
 
-body.dark-mode {
+body.dark-mode,
+body.samsung-dark-mode {
     background-color: /* Ange bakgrundsfärg för mörkt läge */;
     color: /* Ange textfärg för mörkt läge */;
 }
