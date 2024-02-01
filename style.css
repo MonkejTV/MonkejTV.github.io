@@ -353,3 +353,17 @@ nav li a:hover {
         --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     }
 }
+
+/* Ljus läge standardstilar */
+
+body:not(.dark-mode) {
+    background-color: #000;
+    color: #F8F8FF;
+}
+
+/* Mörkt läge stilar */
+
+body.dark-mode {
+    background-color: /* Ange bakgrundsfärg för mörkt läge */;
+    color: /* Ange textfärg för mörkt läge */;
+}
