@@ -335,4 +335,8 @@ nav li a:hover {
         grid-row: auto; /* Allow rows to adjust based on content */
         margin-bottom: 10px; /* Adjust spacing between image containers */
     }
+
+    .Hamburger-Menu {
+        right: 20px; /* Lägg till eller justera detta värde för att justera positionen */
+    }
 }
