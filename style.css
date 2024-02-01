@@ -49,6 +49,7 @@ body {
     --hamburger-margin: 20px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    color-scheme: only light;
 }
 
 .Hamburger-Menu {
@@ -351,5 +352,6 @@ nav li a:hover {
         --hamburger-margin: 20px;
         --animation-timing: 200ms ease-in-out;
         --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+        color-scheme: only light;
     }
 }
