@@ -34,6 +34,7 @@ body {
     color: #F8F8FF;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
+    min-width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -162,9 +163,10 @@ nav li a:hover {
 
 #Content {
     display: grid;
-    margin: 0;
+    width: 100%;
     grid-template-rows: repeat(20, 100px); /* Använd bara 8 rader istället för 20 */
     grid-template-columns: repeat(18, 100px); /* Använd bara 10 kolumner istället för 20 */
+    margin: auto;
     border: 20px solid #000;
     gap: 10px;
 }
@@ -190,6 +192,7 @@ nav li a:hover {
     grid-column: 1 / span 10;
     grid-row: 1 / span 6;
     position: relative;
+    
 }
 
 .C2 {
@@ -240,26 +243,29 @@ nav li a:hover {
     position: relative;
 }
 
-.C1::before,
-.C6::before {
+/*
+ {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Justera alpha-värdet för att ändra toningsnivån */
+    background: rgba(0, 0, 0, 0.6);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.6s ease;
     -moz-transition: opacity 0.6s ease-in-out;
     -webkit-transition: opacity 0.6s ease-in-out;
-}
+}*/
 
+.C1::before,
 .C2::before,
 .C3::before,
 .C4::before,
 .C5::before,
+.C6::before,
+.C7::before,
 .C8::before,
 .C9::before {
     content: "";
@@ -318,8 +324,11 @@ nav li a:hover {
 
 @media screen and (max-width: 1200px) {
     #Content {
-        grid-template-columns: 1fr; /* Set a single column for stacking images */
-        grid-template-rows: auto; /* Allow rows to adjust based on content */
+        display: flex;
+        flex-direction: column; /* Visa bilder i en kolumn för mindre skärmar */
+        align-items: center; /* Centrera innehållet horisontellt */
+        padding: 15px; /* Lägg till lite utrymme runt innehållet */
+        border: 0;
     }
 
     .C1,
@@ -331,9 +340,7 @@ nav li a:hover {
     .C7,
     .C8,
     .C9 {
-        grid-column: span 1; /* Span the entire width of the container */
-        grid-row: auto; /* Allow rows to adjust based on content */
-        margin-bottom: 10px; /* Adjust spacing between image containers */
+        width: 100%; /* Bilder tar upp hela bredden av föräldern */
     }
 
     .Hamburger-Menu {
