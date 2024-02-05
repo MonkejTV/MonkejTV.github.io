@@ -332,8 +332,6 @@ nav li a:hover {
     }
 
     :root {
-        --light-color: #F8F8FF;
-        --dark-color: #000;
         --bar-width: 50px;
         --bar-height: 5px;
         --hamburger-gap: 5px;
