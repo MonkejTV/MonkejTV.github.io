@@ -164,7 +164,7 @@ nav li a:hover {
     display: grid;
     margin: 0;
     grid-template-rows: repeat(20, 100px); /* Använd bara 8 rader istället för 20 */
-    grid-template-columns: repeat(20, 100px); /* Använd bara 10 kolumner istället för 20 */
+    grid-template-columns: repeat(18, 100px); /* Använd bara 10 kolumner istället för 20 */
     border: 20px solid #000;
     gap: 10px;
 }
