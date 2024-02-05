@@ -331,22 +331,6 @@ nav li a:hover {
         right: 20px; /* Lägg till eller justera detta värde för att justera positionen */
     }
 
-    .Hamburger-Menu::before,
-    .Hamburger-Menu::after,
-    .Hamburger-Menu input {
-        background-color: var(--foreground) !important;
-    }
-
-    .Hamburger-Menu:has(input:checked)::before,
-    .Hamburger-Menu:has(input:checked)::after {
-        background-color: var(--background) !important;
-    }
-
-    .Hamburger-Menu:has(input:checked) + nav {
-        background-color: var(--background) !important;
-        color: var(--foreground) !important;
-    }
-
     :root {
         --light-color: #F8F8FF;
         --dark-color: #000;
