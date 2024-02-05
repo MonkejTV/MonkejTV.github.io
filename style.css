@@ -306,6 +306,16 @@ nav li a:hover {
     opacity: 1;
 }
 
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-color: #000;
+        --dark-color: #F8F8FF;
+        --foreground: var(--dark-color);
+        --background: var(--light-color);
+    }
+}
+
 @media screen and (max-width: 1200px) {
     #Content {
         display: flex;
