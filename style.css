@@ -309,9 +309,9 @@ nav li a:hover {
 @media screen and (max-width: 1200px) {
     #Content {
         display: flex;
-        flex-direction: column; /* Visa bilder i en kolumn för mindre skärmar */
-        align-items: center; /* Centrera innehållet horisontellt */
-        padding: 15px; /* Lägg till lite utrymme runt innehållet */
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
         border: 0;
     }
 
@@ -324,19 +324,34 @@ nav li a:hover {
     .C7,
     .C8,
     .C9 {
-        width: 100%; /* Bilder tar upp hela bredden av föräldern */
+        width: 100%;
     }
 
     .Hamburger-Menu {
-        right: 20px; /* Lägg till eller justera detta värde för att justera positionen */
+        right: 20px;
+    }
+
+    .Hamburger-Menu::before,
+    .Hamburger-Menu::after,
+    .Hamburger-Menu input {
+        background-color: #F8F8FF; /* Ljus färg */
+    }
+
+    .Hamburger-Menu:has(input:checked)::before,
+    .Hamburger-Menu:has(input:checked)::after {
+        background-color: #000; /* Mörk färg */
+    }
+
+    .Hamburger-Menu:has(input:checked) + nav {
+        background-color: #000; /* Mörk färg */
+        color: #F8F8FF; /* Ljus färg */
     }
 
     :root {
+        /* Ta bort färgrelaterade egenskaper */
         --bar-width: 50px;
         --bar-height: 5px;
         --hamburger-gap: 5px;
-        --foreground: var(--light-color);
-        --background: var(--dark-color);
         --hamburger-margin: 20px;
         --animation-timing: 200ms ease-in-out;
         --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
