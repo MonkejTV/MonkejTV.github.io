@@ -306,16 +306,6 @@ nav li a:hover {
     opacity: 1;
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --light-color: #000 !important;
-        --dark-color: #F8F8FF !important;
-        --foreground: var(--dark-color) !important;
-        --background: var(--light-color) !important;
-    }
-}
-
 @media screen and (max-width: 1200px) {
     #Content {
         display: flex;
@@ -344,17 +334,17 @@ nav li a:hover {
     .Hamburger-Menu::before,
     .Hamburger-Menu::after,
     .Hamburger-Menu input {
-        background-color: var(--foreground);
+        background-color: var(--foreground) !important;
     }
 
     .Hamburger-Menu:has(input:checked)::before,
     .Hamburger-Menu:has(input:checked)::after {
-        background-color: var(--background);
+        background-color: var(--background) !important;
     }
 
     .Hamburger-Menu:has(input:checked) + nav {
-        background-color: var(--background);
-        color: var(--foreground);
+        background-color: var(--background) !important;
+        color: var(--foreground) !important;
     }
 
     :root {
