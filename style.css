@@ -309,10 +309,10 @@ nav li a:hover {
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --light-color: #000;
-        --dark-color: #F8F8FF;
-        --foreground: var(--dark-color);
-        --background: var(--light-color);
+        --light-color: #000 !important;
+        --dark-color: #F8F8FF !important;
+        --foreground: var(--dark-color) !important;
+        --background: var(--light-color) !important;
     }
 }
 
