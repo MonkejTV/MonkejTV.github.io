@@ -119,6 +119,10 @@ navLink.style.color = '#000';
 navLink.style.padding = '14px 16px';
 navLink.style.textDecoration = 'none';
 
-navLink.addEventListener('hover', () => {
+navLink.addEventListener('mouseenter', () => {
     navLink.style.backgroundColor = '#ff6347';
+});
+
+navLink.addEventListener('mouseleave', () => {
+    navLink.style.backgroundColor = ''; // Återställ till standard bakgrundsfärg
 });
