@@ -52,6 +52,7 @@ body {
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
+/*
 .Hamburger-Menu {
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
 
@@ -160,6 +161,7 @@ nav li a {
 nav li a:hover {
     background-color: 	#ff6347;
 }
+*/
 
 #Content {
     display: grid;
