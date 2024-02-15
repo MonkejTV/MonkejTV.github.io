@@ -52,7 +52,6 @@ body {
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
-/*
 .Hamburger-Menu {
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
 
@@ -72,12 +71,14 @@ body {
     --background: var(--light-color);
 }
 
+/*
 .Hamburger-Menu:has(input:focus-visible)::before,
 .Hamburger-Menu:has(input:focus-visible)::after,
 .Hamburger-Menu input:focus-visible {
     border: 1px solid var(--background);
     box-shadow: 0 0 0 1px var(--foreground);
 }
+*/
 
 .Hamburger-Menu::before,
 .Hamburger-Menu::after,
@@ -161,7 +162,6 @@ nav li a {
 nav li a:hover {
     background-color: 	#ff6347;
 }
-*/
 
 #Content {
     display: grid;
