@@ -12,6 +12,7 @@ hamburgerMenu.style.right = '60px';
 hamburgerMenu.style.zIndex = '2';
 hamburgerMenu.style.cursor = 'pointer';
 
+// Här kan du placera det
 // You might need to replace '--dark-color' and '--light-color' with actual color values
 if (hamburgerMenu.querySelector('input:checked')) {
     hamburgerMenu.style.setProperty('--foreground', getComputedStyle(document.body).getPropertyValue('--dark-color'));
