@@ -10,7 +10,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="scroll.js"></script>
     <script src="homelink.js" defer></script>
-    <script src="meny.js"></script>
 </head>
 <body>
     <!-- Wrapper för allt innehåll på sidan -->
@@ -18,7 +17,7 @@
         <div id="Content-Container">
             <header>
                 <!-- Logo och webbplatsens namn -->
-                <div class="Header-Logo">
+                <div class="logo">
                     <h2>
                         Angelos Henriquez
                     </h2>
@@ -26,22 +25,19 @@
                     <p>Film Maker</p>
                     </aside>
                 </div>
+                <!-- Navigationsmeny för webbplatsens olika sektioner -->
+                <div id="nav_wrapper">
+                    <nav>
+                        <ul class="nav__links">
+                            <li class="page_item"><a href="index.html" aria-current="page" id="home-link">Home</a></li>
+                            <li class="page_item"><a href="#">Photo</a></li>
+                            <li class="page_item"><a href="#">Video</a></li>
+                            <li class="page_item"><a href="#">About Me</a></li>
+                        </ul>
+                    </nav>
+                    <a class="cta" href="#"><button>Contact</button></a>
+                </div>
             </header>
-            <!-- Navigationsmeny för webbplatsens olika sektioner -->
-            <div id="Nav-Menu">
-                <label class="Hamburger-Menu">
-                    <input type="checkbox">
-                </label>
-                <nav>
-                    <ul>
-                        <li class="page_item current_page_item"><a href="index.html" aria-current="page" id="home-link">Home</a></li>
-                        <li class="page_item"><a href="#">Photo</a></li>
-                        <li class="page_item"><a href="#">Video</a></li>
-                        <li class="page_item"><a href="#">Contact</a></li>
-                        <li class="page_item"><a href="#">About Me</a></li>
-                    </ul>
-                </nav>
-            </div>
             <!-- Huvudinnehållet på sidan -->
             <div id="Content">
                 <!-- Bildgalleri med länkar till samlade projekt och beskrivningar -->
