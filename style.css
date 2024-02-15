@@ -92,7 +92,7 @@ body {
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
-#Content {
+#content {
     display: grid;
     width: 100%;
     grid-template-rows: repeat(20, 100px); /* Använd bara 8 rader istället för 20 */
