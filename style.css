@@ -237,8 +237,8 @@ body {
     opacity: 1;
 }
 
-@media screen and (max-width: 1200px) {
-    #Content {
+@media screen and (max-width: 768px) {
+    #content {
         display: flex;
         flex-direction: column; /* Visa bilder i en kolumn för mindre skärmar */
         align-items: center; /* Centrera innehållet horisontellt */
@@ -257,8 +257,5 @@ body {
     .C9 {
         width: 100%; /* Bilder tar upp hela bredden av föräldern */
     }
-
-    .Hamburger-Menu {
-        right: 20px; /* Lägg till eller justera detta värde för att justera positionen */
-    }
 }
+
