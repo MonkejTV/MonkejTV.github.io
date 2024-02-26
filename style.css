@@ -31,6 +31,34 @@ header {
     margin-right: auto;
 }
 
+.hamburger-button {
+    display: none; /* Dölj hamburgermenyn som standard */
+  }
+  
+  .hamburger-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px auto;
+  }
+  
+  .menu-items {
+    display: none; /* Dölj menyalternativen som standard */
+  }
+  
+  /* Visa menyalternativen när hamburgerknappen klickas */
+  .hamburger-menu.active .menu-items {
+    display: block;
+  }
+
 .nav__links {
     list-style: none;
 }
@@ -256,6 +284,16 @@ body {
     .C8,
     .C9 {
         width: 100%; /* Bilder tar upp hela bredden av föräldern */
+    }
+
+    .hamburger-button {
+        display: block; /* Visa hamburgermenyn när skärmen är liten */
+        /* Stilar för utseendet på hamburgarmenyn */
+        /* Du kan anpassa utseendet efter dina önskemål */
+    }
+
+    #nav_wrapper {
+        display: none; /* Dölj den vanliga navigationslänkarna när hamburgermenyn visas */
     }
 }
 
