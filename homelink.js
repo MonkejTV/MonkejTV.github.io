@@ -1,34 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Lägg till klickhändelse för "home" länken i logon
-    var logoLink = document.getElementById('logo-link');
-    logoLink.addEventListener('click', function (event) {
-        event.preventDefault(); // Förhindra standardbeteendet för länken
+    // Hämta alla länkar med id "clean_url"
+    var cleanUrlLinks = document.querySelectorAll('#clean_url');
 
-        // Uppdatera URL utan att ladda om sidan
-        history.pushState({}, document.title, window.location.origin);
-
-        // Nu kan du göra de andra ändringarna som du vill göra när du går till framsidan
-    });
-
-    // Lägg till klickhändelse för "home" länken i navigationsmenyn
-    var navHomeLink = document.getElementById('nav-home-link');
-    navHomeLink.addEventListener('click', function (event) {
-        event.preventDefault(); // Förhindra standardbeteendet för länken
-
-        // Uppdatera URL utan att ladda om sidan
-        history.pushState({}, document.title, window.location.origin);
-
-        // Nu kan du göra de andra ändringarna som du vill göra när du går till framsidan
-    });
-
-        // Lägg till klickhändelse för "home" länken i navigationsmenyn
-        var navHomeLink = document.getElementById('nav-project-link');
-        navHomeLink.addEventListener('click', function (event) {
+    // Lägg till klickhändelser för alla länkar
+    cleanUrlLinks.forEach(function(cleanUrlLink) {
+        cleanUrlLink.addEventListener('click', function (event) {
             event.preventDefault(); // Förhindra standardbeteendet för länken
-    
+
+            // Hämta målprefix för URL (utan filnamn)
+            var urlPrefix = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '/');
+
             // Uppdatera URL utan att ladda om sidan
-            history.pushState({}, document.title, window.location.origin);
-    
-            // Nu kan du göra de andra ändringarna som du vill göra när du går till framsidan
+            history.pushState({}, document.title, urlPrefix);
+
+            // Nu kan du göra andra ändringar beroende på vilken länk som klickades på
         });
+    });
 });
