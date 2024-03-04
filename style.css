@@ -1,6 +1,6 @@
 /*
 Theme name: Angelo Co.
-Description: Tema
+Description: Style
 Version 1.0
 Text domain: Tema
 */
@@ -11,87 +11,6 @@ Text domain: Tema
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #000;
-}
-
-#nav_wrapper {
-    display: flex;
-    align-items: center;
-}
-
-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px 40px;
-}
-
-.logo {
-    cursor: pointer;
-    margin-right: auto;
-}
-  
-  .hamburger-button {
-    display: none; /* Dölj hamburgermenyn som standard */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #F8F8FF;
-    margin: 5px auto;
-  }
-  
-  .menu-items {
-    display: none; /* Dölj menyalternativen som standard */
-  }
-  
-  /* Visa menyalternativen när hamburgerknappen klickas */
-  .hamburger-menu.active .menu-items {
-    display: block;
-  }
-
-.nav__links {
-    list-style: none;
-}
-
-.nav__links li {
-    display: inline-block;
-    padding: 0px 25px;
-}
-
-.nav__links li a {
-    transition: all 0.3s ease 0s;
-}
-
-.nav__links li a:hover {
-    color: #0088a9;
-}
-
-#nav_wrapper .contact_me {
-    margin-left: 25px;
-    padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-#nav_wrapper .contact_me:hover {
-    background-color: rgba(0, 136, 169, 0.8);
-}
-
-li, a, .contact_me {
-    font-weight: 500;
-    font-size: 16px;
-    color: #F8F8FF;
-    text-decoration: none;
 }
 
 body {
@@ -99,9 +18,9 @@ body {
     color: #F8F8FF;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    min-width: 100%;
     margin: 0;
     padding: 0;
+    background-color: #000;
 }
 
 :root {
@@ -117,11 +36,69 @@ body {
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+  
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+#nav__wrapper .contact_me:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+  
+#nav__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.nav__links {
+    list-style: none;
+}
+  
+.nav__links li {
+    display: inline-block;
+    padding: 0px 25px;
+}
+  
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+  
+.nav__links li a:hover {
+    color: #0088a9;
+}
+
+#nav__wrapper .contact_me {
+    margin-left: 25px;
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+  
+li, a, .contact_me {
+    font-weight: 500;
+    font-size: 16px;
+    color: #F8F8FF;
+    text-decoration: none;
+}
+
+.nav__mobile {
+    display: none;
+}
+  
 #content {
     display: grid;
     width: 100%;
-    grid-template-rows: repeat(20, 100px); /* Använd bara 8 rader istället för 20 */
-    grid-template-columns: repeat(18, 100px); /* Använd bara 10 kolumner istället för 20 */
+    grid-template-rows: repeat(20, 6.25rem);
+    grid-template-columns: repeat(auto-fit, 6.25rem);
     margin: auto;
     border: 20px solid #000;
     gap: 10px;
@@ -141,14 +118,13 @@ body {
     height: 100%;
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover; /* Behåll bildens proportioner och täck hela containern */
+    object-fit: cover;
 }
 
 .C1 {
     grid-column: 1 / span 10;
     grid-row: 1 / span 6;
     position: relative;
-    
 }
 
 .C2 {
@@ -262,7 +238,106 @@ body {
     opacity: 1;
 }
 
-@media screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
+    #nav__wrapper {
+        display: none;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
+    
+    header #nav__wrapper__mobile {
+        position: fixed;
+        top: 1.5%;
+        right: 5.5%;
+        z-index: 999;
+    }
+
+    .ham {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: transparent;
+        position: relative;
+        z-index: 999;
+        height: 60px;
+        width: 60px;
+    }
+    
+    .line {
+        fill:none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke:#fff;
+        stroke-width:5.5;
+        stroke-linecap:round;
+    }
+    
+    .ham3 .top {
+        stroke-dasharray: 40 130;
+    }
+    
+    .ham3 .middle {
+        stroke-dasharray: 40 140;
+    }
+    
+    .ham3 .bottom {
+        stroke-dasharray: 40 205;
+    }
+    
+    .ham3.active .top {
+        stroke-dasharray: 75 130;
+        stroke-dashoffset: -63px;
+    }
+    
+    .ham3.active .middle {
+        stroke-dashoffset: -102px;
+    }
+    
+    .ham3.active .bottom {
+        stroke-dasharray: 110 205;
+        stroke-dashoffset: -86px;
+    }
+
+    .nav__mobile {
+        min-height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(0,0,0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+        display: block;
+        border: none;
+    }
+
+    .nav__mobile ul {
+        margin-top: 250px;
+    }
+    
+    .nav__links__mobile {
+        display: block;
+        text-align: center;
+        list-style: none;
+
+    }
+
+    .nav__links__mobile a {
+        font-size: 30px;
+    }
+
+    .nav__links__mobile li {
+        margin-bottom: 40px;
+    }
+
     #content {
         display: flex;
         flex-direction: column; /* Visa bilder i en kolumn för mindre skärmar */
@@ -270,7 +345,7 @@ body {
         padding: 15px; /* Lägg till lite utrymme runt innehållet */
         border: 0;
     }
-
+    
     .C1,
     .C2,
     .C3,
@@ -281,15 +356,5 @@ body {
     .C8,
     .C9 {
         width: 100%; /* Bilder tar upp hela bredden av föräldern */
-    }
-
-    .hamburger-button {
-        display: block; /* Visa hamburgermenyn när skärmen är liten */
-        /* Stilar för utseendet på hamburgarmenyn */
-        /* Du kan anpassa utseendet efter dina önskemål */
-    }
-
-    #nav_wrapper {
-        display: none; /* Dölj den vanliga navigationslänkarna när hamburgermenyn visas */
     }
 }
