@@ -363,7 +363,8 @@ li, a, .contact_me {
     #content {
         display: flex;
         flex-wrap: wrap; /* Tillåter flexobjekt att flyta till nästa rad */
-        gap: 10px; /* Lägger till lite mellanrum mellan bilderna */
+        padding: 15px;
+        border: 0;
     }
     
     .C1,
