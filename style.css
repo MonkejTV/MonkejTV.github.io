@@ -438,6 +438,7 @@ li, a, .contact_me {
         transition: 0.5s;
         display: block;
         border: none;
+        transform: translateY(0);
     }
 
     .nav__mobile ul {
@@ -456,7 +457,6 @@ li, a, .contact_me {
     }
 
     .nav__links__mobile li {
-        
         margin-bottom: 25px;
     }
     
