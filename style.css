@@ -441,7 +441,7 @@ li, a, .contact_me {
     }
 
     .nav__mobile ul {
-        margin-top: 100px;
+        margin-top: 60px;
     }
     
     .nav__links__mobile {
@@ -452,7 +452,7 @@ li, a, .contact_me {
     }
 
     .nav__links__mobile a {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .nav__links__mobile li {
