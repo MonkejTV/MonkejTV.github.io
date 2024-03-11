@@ -452,11 +452,11 @@ li, a, .contact_me {
     }
 
     .nav__links__mobile a {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .nav__links__mobile li {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
     
     #content {
