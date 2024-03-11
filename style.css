@@ -360,6 +360,105 @@ li, a, .contact_me {
 }
 
 @media only screen and (min-width: 501px) and (max-width: 950px) {
+    #nav__wrapper {
+        display: none;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
+    
+    header #nav__wrapper__mobile {
+        position: fixed;
+        top: 1.5%;
+        right: 5.5%;
+        z-index: 999;
+    }
+
+    .ham {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: transparent;
+        position: relative;
+        z-index: 999;
+        height: 60px;
+        width: 60px;
+    }
+    
+    .line {
+        fill:none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke:#fff;
+        stroke-width:5.5;
+        stroke-linecap:round;
+    }
+    
+    .ham3 .top {
+        stroke-dasharray: 40 130;
+    }
+    
+    .ham3 .middle {
+        stroke-dasharray: 40 140;
+    }
+    
+    .ham3 .bottom {
+        stroke-dasharray: 40 205;
+    }
+    
+    .ham3.active .top {
+        stroke-dasharray: 75 130;
+        stroke-dashoffset: -63px;
+    }
+    
+    .ham3.active .middle {
+        stroke-dashoffset: -102px;
+    }
+    
+    .ham3.active .bottom {
+        stroke-dasharray: 110 205;
+        stroke-dashoffset: -86px;
+    }
+
+    .nav__mobile {
+        min-height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(0,0,0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+        display: block;
+        border: none;
+    }
+
+    .nav__mobile ul {
+        margin-top: 100px;
+    }
+    
+    .nav__links__mobile {
+        display: block;
+        text-align: center;
+        list-style: none;
+
+    }
+
+    .nav__links__mobile a {
+        font-size: 30px;
+    }
+
+    .nav__links__mobile li {
+        margin-bottom: 40px;
+    }
+    
     #content {
         display: flex;
         flex-wrap: wrap; /* Tillåter flexobjekt att flyta till nästa rad */
