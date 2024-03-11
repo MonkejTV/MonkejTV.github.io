@@ -441,7 +441,7 @@ li, a, .contact_me {
     }
 
     .nav__mobile ul {
-        margin-top: 60px;
+        transform: translateY(50%);
     }
     
     .nav__links__mobile {
@@ -456,6 +456,7 @@ li, a, .contact_me {
     }
 
     .nav__links__mobile li {
+        
         margin-bottom: 25px;
     }
     
