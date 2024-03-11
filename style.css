@@ -438,11 +438,10 @@ li, a, .contact_me {
         transition: 0.5s;
         display: block;
         border: none;
-        transform: translateY(0);
     }
 
-    .nav__mobile ul {
-        transform: translateY(50%);
+    .nav__mobile ul li {
+        transform: translateY(200%);
     }
     
     .nav__links__mobile {
