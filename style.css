@@ -98,10 +98,11 @@ li, a, .contact_me {
     display: grid;
     width: 100%;
     grid-template-rows: repeat(20, 6.25rem);
-    grid-template-columns: repeat(auto-fit, 6.25rem);
+    grid-template-columns: repeat(17, 6.25rem);
     margin: auto;
     border: 20px solid #000;
     gap: 10px;
+    justify-content: space-evenly;
 }
 
 .C1 img,
