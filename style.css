@@ -96,9 +96,9 @@ li, a, .contact_me {
   
 #content {
     display: grid;
-    width: 100%;
+    max-width: 100%;
     grid-template-rows: repeat(20, 6.25rem);
-    grid-template-columns: repeat(17, 6.25rem);
+    grid-template-columns: repeat(17, 5.38%);
     margin: auto;
     border: 20px solid #000;
     gap: 10px;
