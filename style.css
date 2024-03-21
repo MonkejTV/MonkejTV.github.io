@@ -319,19 +319,14 @@ li, a, .contact_me {
         background-color: rgba(0,0,0, 0.9);
         overflow-x: hidden;
         transition: 0.5s;
-        display: block;
+        display: flex;
         border: none;
     }
 
-    .nav__mobile ul {
-        margin-top: 250px;
-    }
-    
     .nav__links__mobile {
-        display: block;
         text-align: center;
         list-style: none;
-
+        margin: auto;
     }
 
     .nav__links__mobile a {
@@ -440,19 +435,14 @@ li, a, .contact_me {
         background-color: rgba(0,0,0, 0.9);
         overflow-x: hidden;
         transition: 0.5s;
-        display: block;
+        display: flex;
         border: none;
-    }
-
-    .nav__mobile ul li {
-        transform: translateY(200%);
     }
     
     .nav__links__mobile {
-        display: block;
         text-align: center;
         list-style: none;
-
+        margin: auto;
     }
 
     .nav__links__mobile a {
@@ -460,7 +450,7 @@ li, a, .contact_me {
     }
 
     .nav__links__mobile li {
-        margin-bottom: 25px;
+        margin-bottom: 40px;
     }
     
     #content {
